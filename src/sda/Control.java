@@ -1,4 +1,4 @@
-package sample;
+package sda;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,7 +14,7 @@ import javafx.stage.Window;
 import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Control {
@@ -57,7 +57,7 @@ public class Control {
         File file = (File) fileChooser.showOpenDialog(primaryStage);
 
         if (file != null) {
-            List<File> files = Arrays.asList(file);
+            List<File> files = Collections.singletonList(file);
             Convert convert = new Convert();
             convert.convertFile(files.get(0).toString());
         }

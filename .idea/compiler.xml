@@ -22,7 +22,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="....." target="1.5" />
-      <module name="PdfConvet" target="1.5" />
+      <module name="PdfConvet" target="6" />
     </bytecodeTargetLevel>
   </component>
 </project>

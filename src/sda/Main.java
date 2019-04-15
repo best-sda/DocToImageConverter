@@ -1,4 +1,4 @@
-package sample;
+package sda;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -6,8 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import javax.script.ScriptException;
 import java.io.IOException;
-import java.text.ParseException;
 
 import static javafx.application.Application.launch;
 
@@ -22,10 +22,13 @@ public class Main extends Application {
     }
 
 
-    public static void main(String[] args) throws IOException, ParseException, InterruptedException {
-        launch(args);
+    public static void main(String[] args) throws IOException, ScriptException {
+     //  AppleScriptConvertor appleScriptConvertor= new AppleScriptConvertor();
+      //  appleScriptConvertor.convertPagesOnMac();
+       launch(args);
      //   Convert convert = new Convert();
        // convert.convertFiles("ява лаба 5.pdf")
-
+   // AppleScriptConvertor appleScriptConvertor= new AppleScriptConvertor();
+   // appleScriptConvertor.convertPagesOnMac();
     }
 }
