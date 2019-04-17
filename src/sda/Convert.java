@@ -12,8 +12,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
 
-import static sda.Utils.convertPagesOnMac;
-import static sda.Utils.startOnlineConvert;
+import static sda.Utils.*;
 
 class Convert {
 
@@ -25,10 +24,14 @@ class Convert {
     if (fileType.equals("pdf")) {
        convertPDFFiles(name);
     }
-   else if ((PlatformUtil.isMac()) || (fileType.equals("pages"))){
-       name = convertPagesOnMac(name, baseName);
-       convertPDFFiles(name);
-       }
+   else if ((PlatformUtil.isMac()) && (fileType.equals("pages"))) {
+        name = convertPagesOnMac(name, baseName);
+        convertPDFFiles(name);
+    }
+   else if (fileType.equals("docx")|| fileType.equals("doc")){
+       name = convertDocx(name, baseName);
+        convertPDFFiles(name);
+    }
     else if ((fileType.equals("doc") )|| (fileType.equals("docx")) || (fileType.equals("rtf")) || (fileType.equals("pages"))||(fileType.equals("odt"))) {
         String fileName = startOnlineConvert(name, fileType, path, baseName);
         convertPDFFiles(fileName);
